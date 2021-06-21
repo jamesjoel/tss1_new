@@ -1,1 +1,16 @@
-<p>help works!</p>
+<div class="container mt-4">
+    <div class="row">
+        <div class="col-md-12">
+            <h1 class="text-center">Swich Case in Angular</h1>
+
+            <div [ngSwitch]="z">
+                <h2 *ngSwitchCase="'a'">Indore</h2>
+                <h2 *ngSwitchCase="'b'">Mumbai</h2>
+                <h2 *ngSwitchCase="'c'">Pune</h2>
+                <h2 *ngSwitchCase="'d'">Bhopal</h2>
+                <h2 *ngSwitchDefault>No City</h2>
+           </div>
+        </div>
+    </div>
+</div>
+

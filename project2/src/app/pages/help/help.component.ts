@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HelpComponent implements OnInit {
 
+  z="csdfgsdfg";
   constructor() { }
 
   ngOnInit(): void {
