@@ -7,6 +7,9 @@ import { ContactComponent } from './pages/contact/contact.component';
 import { AboutComponent } from './pages/about/about.component';
 import { EmployeeComponent } from './pages/employee/employee.component';
 import { ProductsComponent } from './pages/products/products.component';
+import { StudentComponent } from './pages/student/student.component';
+import { Event1Component } from './pages/event1/event1.component';
+import { Event2Component } from './pages/event2/event2.component';
 
 
 const routes: Routes = [
@@ -33,7 +36,20 @@ const routes: Routes = [
   {
     path : "product",
     component : ProductsComponent
+  },
+  {
+    path : "student",
+    component : StudentComponent
+  },
+  {
+    path : "event1",
+    component : Event1Component
+  },
+  {
+    path : "event2",
+    component : Event2Component
   }
+  
 ];
 
 

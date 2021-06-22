@@ -13,6 +13,9 @@ import { Box1Component } from './shared/box1/box1.component';
 import { Box2Component } from './shared/box2/box2.component';
 import { EmployeeComponent } from './pages/employee/employee.component';
 import { ProductsComponent } from './pages/products/products.component';
+import { StudentComponent } from './pages/student/student.component';
+import { Event1Component } from './pages/event1/event1.component';
+import { Event2Component } from './pages/event2/event2.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +29,10 @@ import { ProductsComponent } from './pages/products/products.component';
     Box1Component,
     Box2Component,
     EmployeeComponent,
-    ProductsComponent
+    ProductsComponent,
+    StudentComponent,
+    Event1Component,
+    Event2Component
   ],
   imports: [
     BrowserModule,
