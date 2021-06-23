@@ -1,0 +1,39 @@
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-md-12">
+            <br />
+            <br />
+            <br />
+            <input type="text" (keydown)="demo()"/>
+            <Br />
+            <Br />
+            <input type="text" (focus)="demo2()" (blur)="demo3()"/>
+            <br />
+            <br />
+            <textarea (keyup)="count(text)" #text class="form-control"></textarea>
+            <br />
+            <p>Total : {{ total }} </p>
+        </div>
+
+        <button (click)="abc(x)">OK</button>
+        <p #x>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente, neque amet, magnam at est ipsa expedita deleniti quod, rerum possimus esse ut dicta saepe suscipit aliquam nihil! Ab, accusantium dolorem.</p>
+
+        
+
+        <div (scroll)="demo4()" style="height: 100px;  width: 300px; background-color: #784512; overflow-y: scroll; margin-bottom: 50px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores distinctio perferendis voluptates hic corrupti, ipsum eum vero est nemo ut repellendus optio architecto, ducimus nihil, totam consequatur alias quae praesentium. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quidem officiis ea incidunt quas perferendis nobis minima adipisci optio architecto deserunt nihil numquam debitis quaerat veniam aut nostrum, tenetur necessitatibus accusantium? Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quia fugiat quis sint vero rerum architecto molestias saepe voluptatem quam beatae, magni doloremque a mollitia laborum perferendis illum eos soluta? Explicabo?</div>
+
+        <br />
+        <Br />
+
+
+        <select (change)="demo5()" class="form-control">
+            <option>Select</option>
+            <option>Indore</option>
+            <option>Mumbai</option>
+            <option>Pune</option>
+            <option>Delhi</option>
+            
+        </select>
+       
+    </div>
+</div>

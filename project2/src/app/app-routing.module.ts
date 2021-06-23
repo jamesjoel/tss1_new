@@ -10,6 +10,7 @@ import { ProductsComponent } from './pages/products/products.component';
 import { StudentComponent } from './pages/student/student.component';
 import { Event1Component } from './pages/event1/event1.component';
 import { Event2Component } from './pages/event2/event2.component';
+import { Event3Component } from './pages/event3/event3.component';
 
 
 const routes: Routes = [
@@ -48,6 +49,10 @@ const routes: Routes = [
   {
     path : "event2",
     component : Event2Component
+  },
+  {
+    path : "event3",
+    component : Event3Component
   }
   
 ];

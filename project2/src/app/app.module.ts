@@ -16,6 +16,7 @@ import { ProductsComponent } from './pages/products/products.component';
 import { StudentComponent } from './pages/student/student.component';
 import { Event1Component } from './pages/event1/event1.component';
 import { Event2Component } from './pages/event2/event2.component';
+import { Event3Component } from './pages/event3/event3.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { Event2Component } from './pages/event2/event2.component';
     ProductsComponent,
     StudentComponent,
     Event1Component,
-    Event2Component
+    Event2Component,
+    Event3Component
   ],
   imports: [
     BrowserModule,
