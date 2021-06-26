@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 interface Emp{
+  _id? : number;
   name:string;
   age:number|null;
   salary :number|null;
@@ -27,6 +28,7 @@ export class EmployeeComponent implements OnInit {
   employes:Emp[]=
   [
     {
+      _id : 1,
       name : "rohit",
       age : 25,
       city : "Indore",
@@ -34,10 +36,27 @@ export class EmployeeComponent implements OnInit {
       gender : "male"
     },
     {
+      _id : 2,
       name : "jaya",
       age : 22,
       city : "Bhopal",
       salary : 4500,
+      gender : "female"
+    },
+    {
+      _id : 3,
+      name : "amar",
+      age : 23,
+      city : "Mumbai",
+      salary : 6000,
+      gender : "male"
+    },
+    {
+      _id : 4,
+      name : "nidhi",
+      age : 20,
+      city : "Pune",
+      salary : 7000,
       gender : "female"
     }
   ];
@@ -48,7 +67,38 @@ export class EmployeeComponent implements OnInit {
   }
 
   save(){
+    // we can create our id, but after implant database this logic
+    // have to detele.
+    let total = this.employes.length;
+    total++;
+    this.emp._id = total;
+
+
     this.employes.push(this.emp);
+    
+  }
+  empty(){
+    this.emp={
+      name : "",
+      age : null,
+      salary : null,
+      city : "",
+      gender : ""
+    }
+  }
+  askDelete(obj:Emp){
+    this.emp = obj;
+    
+  }
+  confDelete(){
+    let n = this.employes.indexOf(this.emp);
+    // console.log(n);
+    this.employes.splice(n ,1);
+  }
+  askEdit(obj:Emp){
+    // this.emp = obj;
+    // we want tranfer data but dont want binding
+    this.emp = {... obj};
   }
 }
 

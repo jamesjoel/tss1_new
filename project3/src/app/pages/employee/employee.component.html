@@ -1,10 +1,10 @@
 <div class="row">
     <div class="col-md-10 offset-md-1">
-        <!-- <pre>{{ emp | json }}</pre> -->
+        <!-- <pre>{{ employes | json }}</pre> -->
         <Br />
         <Br />
 
-        <button data-toggle="modal" data-target="#addModal" class="btn btn-primary">Add New Employee</button>
+        <button (click)="empty()" data-toggle="modal" data-target="#addModal" class="btn btn-primary">Add New Employee</button>
         
         <table class="table table-hover table-striped table-dark mt-3">
             <tr>
@@ -14,6 +14,8 @@
                 <th>Salary</th>
                 <th>City</th>
                 <th>Gender</th>
+                <th>Edit</th>
+                <th>Delete</th>
             </tr>
            <tr *ngFor="let e of employes; let n = index">
                <td>{{ n+1 }}</td>
@@ -22,38 +24,59 @@
                <td>{{ e.salary }}</td>
                <td>{{ e.city }}</td>
                <td>{{ e.gender }}</td>
+               <td><button (click)="askEdit(e)" data-toggle="modal" data-target="#addModal" class="btn btn-info btn-sm">Edit</button></td>
+               <td><button (click)="askDelete(e)" data-toggle="modal" data-target="#delModal" class="btn btn-sm btn-danger">Delete</button></td>
            </tr>
 
         </table>
     </div>
 </div>
 
+<div id="delModal" class="modal fade">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Delete</h3>
+            </div>
+            <div class="modal-body">
+                <p>Are you sure want to delete <b>{{ emp.name }}</b> !</p>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-dark" data-dismiss="modal">Close</button>
+                <button class="btn btn-danger" data-dismiss="modal" (click)="confDelete()">Delete</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
 <div id="addModal" class="modal fade">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
-                <h3>Add New Employee</h3>
+                <h3>{{ emp._id ? "Update" : "Add New" }} Employee</h3>
             </div>
             <div class="modal-body">
                 <div class="form-group">
                     <label>Name</label>
-                    <input [(ngModel)]="emp.name" type="text" class="form-control" />
+                    <input placeholder="Name" [(ngModel)]="emp.name" type="text" class="form-control" />
                 </div>
                 <div class="form-group">
                     <label>Age</label>
-                    <input [(ngModel)]="emp.age" type="text"  class="form-control" />
+                    <input placeholder="Age" [(ngModel)]="emp.age" type="text"  class="form-control" />
                 </div>
                 <div class="form-group">
                     <label>Salary</label>
-                    <input [(ngModel)]="emp.salary" type="text"  class="form-control" />
+                    <input placeholder="Salary" [(ngModel)]="emp.salary" type="text"  class="form-control" />
                 </div>
                 <div class="form-group">
                     <label>City</label>
                     <select [(ngModel)]="emp.city"  class="form-control">
-                        <option>Select</option>
-                        <option>Indore</option>
-                        <option>Mumbai</option>
-                        <option>Pune</option>
+                        <option value="">Select</option>
+                        <option value="Indore">Indore</option>
+                        <option value="Mumbai">Mumbai</option>
+                        <option value="Pune">Pune</option>
                     </select>
                 </div>
                 <div class="form-group">
@@ -66,7 +89,7 @@
             </div>
             <div class="modal-footer">
                 <button class="btn btn-danger" data-dismiss="modal">Close</button>
-                <button (click)="save()" class="btn btn-success" data-dismiss="modal">Add</button>
+                <button (click)="save()" class="btn btn-success" data-dismiss="modal">{{ emp._id ? "Update" : "Add" }}</button>
             </div>
         </div>
     </div>
