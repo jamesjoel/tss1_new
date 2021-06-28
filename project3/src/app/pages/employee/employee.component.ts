@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
+
+
 interface Emp{
   _id? : number;
   name:string;
@@ -16,6 +18,10 @@ interface Emp{
   styleUrls: ['./employee.component.scss']
 })
 export class EmployeeComponent implements OnInit {
+
+  // a="";
+
+  id:any=null;
 
   emp:Emp={
     name : "",
@@ -69,13 +75,25 @@ export class EmployeeComponent implements OnInit {
   save(){
     // we can create our id, but after implant database this logic
     // have to detele.
-    let total = this.employes.length;
-    total++;
-    this.emp._id = total;
+    if(this.emp._id) // when we doing update
+    {
+      for(let i = 0; i < this.employes.length; i++)
+      {
+        if(this.employes[i]._id == this.id)
+        {
+          this.employes[i] = this.emp;
+          break;
+        }
+      }
+    }
+    else // when we doing add
+    {
+        let total = this.employes.length;
+        total++;
+        this.emp._id = total;
+        this.employes.push(this.emp);
+    }
 
-
-    this.employes.push(this.emp);
-    
   }
   empty(){
     this.emp={
@@ -98,11 +116,16 @@ export class EmployeeComponent implements OnInit {
   askEdit(obj:Emp){
     // this.emp = obj;
     // we want tranfer data but dont want binding
+    this.id = obj._id;
+    
     this.emp = {... obj};
   }
 }
 
 /*
+
+
+
   a = 5;
   b = 10;
 

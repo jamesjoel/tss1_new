@@ -10,6 +10,9 @@ import { HomeComponent } from './pages/home/home.component';
 import { StudentComponent } from './pages/student/student.component';
 import { HeaderComponent } from './shared/header/header.component';
 import { EmployeeComponent } from './pages/employee/employee.component';
+import { AboutComponent } from './pages/about/about.component';
+import { BoxComponent } from './shared/box/box.component';
+import { Box2Component } from './shared/box2/box2.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +20,10 @@ import { EmployeeComponent } from './pages/employee/employee.component';
     HomeComponent,
     StudentComponent,
     HeaderComponent,
-    EmployeeComponent
+    EmployeeComponent,
+    AboutComponent,
+    BoxComponent,
+    Box2Component
   ],
   imports: [
     BrowserModule,
