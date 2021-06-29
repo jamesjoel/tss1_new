@@ -1,0 +1,10 @@
+<p>contact works!</p>
+<hr />
+<pre>{{ obj | json }}</pre>
+Name : <input type="text" [(ngModel)]="obj.name" />
+Age : <input type="text" [(ngModel)]="obj.age"/>
+<button (click)="add()">Add</button>
+<hr />
+<hr />
+<Br />
+<app-box3 [childObj]="obj2" [childUsers]="users"></app-box3>

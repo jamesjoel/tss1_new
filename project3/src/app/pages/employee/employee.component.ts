@@ -31,6 +31,8 @@ export class EmployeeComponent implements OnInit {
     gender : ""
   }
 
+
+
   employes:Emp[]=
   [
     {
@@ -91,6 +93,8 @@ export class EmployeeComponent implements OnInit {
         let total = this.employes.length;
         total++;
         this.emp._id = total;
+
+
         this.employes.push(this.emp);
     }
 
@@ -106,20 +110,20 @@ export class EmployeeComponent implements OnInit {
   }
   askDelete(obj:Emp){
     this.emp = obj;
-    
+  }
+  askEdit(obj:Emp){
+    // this.emp = obj;
+    // we want tranfer data but dont want binding
+    this.id = obj._id;
+
+    this.emp = {... obj};
   }
   confDelete(){
     let n = this.employes.indexOf(this.emp);
     // console.log(n);
     this.employes.splice(n ,1);
   }
-  askEdit(obj:Emp){
-    // this.emp = obj;
-    // we want tranfer data but dont want binding
-    this.id = obj._id;
-    
-    this.emp = {... obj};
-  }
+  
 }
 
 /*

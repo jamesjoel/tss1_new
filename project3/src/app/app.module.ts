@@ -13,6 +13,8 @@ import { EmployeeComponent } from './pages/employee/employee.component';
 import { AboutComponent } from './pages/about/about.component';
 import { BoxComponent } from './shared/box/box.component';
 import { Box2Component } from './shared/box2/box2.component';
+import { ContactComponent } from './pages/contact/contact.component';
+import { Box3Component } from './shared/box3/box3.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +25,9 @@ import { Box2Component } from './shared/box2/box2.component';
     EmployeeComponent,
     AboutComponent,
     BoxComponent,
-    Box2Component
+    Box2Component,
+    ContactComponent,
+    Box3Component
   ],
   imports: [
     BrowserModule,

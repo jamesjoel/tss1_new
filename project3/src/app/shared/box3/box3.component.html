@@ -1,0 +1,20 @@
+<p>box3 works!</p>
+<div class="container">
+    <div class="row">
+        <div class="col-md-8 offset-md-2">
+            <table class="table table-bordered table-dark">
+                <tr>
+                    <th>S.No.</th>
+                    <th>Name</th>
+                    <th>Age</th>
+                </tr>
+                <tr *ngFor="let u of childUsers; let n = index">
+                    <td>{{ n+1 }}</td>
+                    <td>{{ u.name }}</td>
+                    <td>{{ u.age }}</td>
+                </tr>
+            </table>
+            <pre>{{ childObj | json }}</pre>
+        </div>
+    </div>
+</div>
