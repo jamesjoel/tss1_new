@@ -1,0 +1,13 @@
+<p>help works!</p>
+<h2>{{ name }}</h2>
+<pre>{{ obj | json }}</pre>
+<hr />
+<hr />
+<hr />
+<hr />
+<app-box4 
+    [abc]="abc"
+    (x)="x($event)"
+    (childToParent)="childToParentRec($event)" 
+    (goToParent)="recChild($event)">
+</app-box4>

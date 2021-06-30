@@ -15,6 +15,8 @@ import { BoxComponent } from './shared/box/box.component';
 import { Box2Component } from './shared/box2/box2.component';
 import { ContactComponent } from './pages/contact/contact.component';
 import { Box3Component } from './shared/box3/box3.component';
+import { HelpComponent } from './pages/help/help.component';
+import { Box4Component } from './shared/box4/box4.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +29,9 @@ import { Box3Component } from './shared/box3/box3.component';
     BoxComponent,
     Box2Component,
     ContactComponent,
-    Box3Component
+    Box3Component,
+    HelpComponent,
+    Box4Component
   ],
   imports: [
     BrowserModule,
