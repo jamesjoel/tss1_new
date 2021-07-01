@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { HelloService } from '../../services/hello.service';
 
 interface Stu{
   name : string;
@@ -41,7 +42,10 @@ export class StudentComponent implements OnInit {
     }
   ];
 
-  constructor() { }
+  constructor(private _hello : HelloService) { 
+    let ans =this._hello.calc(3, 7);
+    console.log(ans);
+  }
 
   ngOnInit(): void {
   }
