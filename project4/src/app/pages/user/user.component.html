@@ -1,0 +1,56 @@
+<p>user works!</p>
+<!-- <pre>{{ users | json }}</pre> -->
+<div class="row">
+    <div class="col-md-8 offset-md-2">
+        <button class="btn btn-primary" data-toggle="modal" data-target="#addModal">Add</button>
+        <br />
+        <table class="table table-dark table-bordered">
+            <tr>
+                <th>S.No.</th>
+                <th>Name</th>
+                <th>Age</th>
+                <th>City</th>
+            </tr>
+            <tr *ngFor="let u of users; let n=index">
+                <!-- <pre>{{ u | json }}</pre> -->
+                    <td>{{ n+1 }}</td>
+                    <td>{{ u.name }}</td>
+                    <td>{{ u.age }}</td>
+                    <td>{{ u.city }}</td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+<div id="addModal" class="modal fade">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Add New Users</h3>
+            </div>
+            <Div class="modal-body">
+                <div class="form-group">
+                    <label>Full Name</label>
+                    <input type="text" class="form-control" />
+                </div>
+                <div class="form-group">
+                    <label>Age</label>
+                    <input type="text" class="form-control" />
+                </div>
+                <div class="form-group">
+                    <label>City</label>
+                    <select class="form-control">
+                        <option value="">Select</option>
+                        <option value="indore">Indore</option>
+                        <option value="mumbai">Mumbai</option>
+                        <option value="pune">Pune</option>
+                    </select>
+                </div>
+            </Div>
+            <div class="modal-footer">
+                <button class="btn btn-success" data-dismiss="modal">Add</button>
+                <button class="btn btn-danger" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>

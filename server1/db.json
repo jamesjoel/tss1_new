@@ -1,0 +1,22 @@
+{
+    "users":[
+        {
+           "id" : 1,
+           "name" : "Rohit",
+           "age" : 25,
+           "city" : "indore" 
+        },
+        {
+            "id" : 2,
+            "name" : "Jaya",
+            "age" : 24,
+            "city" : "mumbai"
+        },
+        {
+            "id" : 3,
+            "name" : "amar",
+            "age" : 28,
+            "city" : "indore"
+         }
+    ]
+}
