@@ -1,6 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 // import { HttpClient } from '@angular/common/http';
 import { UsersService } from '../../services/users.service';
+import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+/*
+  FormGroup is a interface
+  FormBuilder is a service
+  Validators Class
+*/
+
 
 interface UserInterface{
   id? : number|null;
@@ -17,18 +24,36 @@ interface UserInterface{
 export class UserComponent implements OnInit {
 
   users:UserInterface[]=[];
-  constructor(private _users : UsersService) {
-    // this._http.get<any>("http://localhost:3000/users").subscribe((data)=>{
-    //   this.users = data;
-      
-    // });
+
+  userForm : FormGroup;
+
+  isSubmit=false;
+
+  constructor(private _users : UsersService, private _fb : FormBuilder) {
+    
       this._users.getData().subscribe((data)=>{
         this.users = data;
-      })
+      });
+
+      this.userForm = this._fb.group({
+        name : ["", Validators.required],
+        age : [null, Validators.required],
+        city : ["", Validators.required]
+      });
 
    }
 
   ngOnInit(): void {
+  }
+
+  save(){
+    this.isSubmit = true;
+
+    if(this.userForm.invalid){
+      return;
+    }
+    console.log(this.userForm.value);
+    this.users.push(this.userForm.value);
   }
 
 }
