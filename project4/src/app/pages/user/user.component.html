@@ -80,5 +80,53 @@
     ngSwtichCase
     ngSwtichDefault
 
+    a=100;
+
+    <div data-target="#myid"
+
+
+    <div [attr.data-target]= "a==100 ? '#myid' : '#myid2'" >
+
+    
+    []
+    {{  }}
+    [(ngModel)]
+    a="1.jpg";
+
+
+
+    <p>{{ a }}</p>
+    <img src="{{ a }}" />
+    only a's value is bind
+
+    <img [ngSrc]="a" />
+    attribute(src) is bind with a
+
+    <input type="text" value="{{ a }}" />
+    there only print value is bind
+
+
+    <input type="text" [(ngModel)]="a" />
+    there a's value is bind
+
+
+    src ----- [ngSrc]
+    class --- [ngClass]
+
+   
+    border -- [ngBorder]
+
+    <table [attr.border]="a"
+
+
+    Property Binding
+
+---------------------------------------
+
+x=true
+
+    <p class="text-danger">
+
+        <p [ngClass]="x=='true' ? 'text-danger' : 'text-dark'"
 
  -->

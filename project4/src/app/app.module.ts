@@ -12,6 +12,7 @@ import { AboutComponent } from './pages/about/about.component';
 import { UserComponent } from './pages/user/user.component';
 import { HeaderComponent } from './shared/header/header.component';
 import { FooterComponent } from './shared/footer/footer.component';
+import { FormsComponent } from './pages/forms/forms.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { FooterComponent } from './shared/footer/footer.component';
     AboutComponent,
     UserComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    FormsComponent
   ],
   imports: [
     BrowserModule,
