@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 // import { HttpClient } from '@angular/common/http';
 import { UsersService } from '../../services/users.service';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+import { checkNum, checkAge } from '../../helpers/user.validation';
 /*
   FormGroup is a interface
   FormBuilder is a service
@@ -39,6 +40,9 @@ export class UserComponent implements OnInit {
         name : ["", Validators.required],
         age : [null, Validators.required],
         city : ["", Validators.required]
+      },
+      {
+        validator : [checkNum(), checkAge()]
       });
 
    }
@@ -52,8 +56,9 @@ export class UserComponent implements OnInit {
     if(this.userForm.invalid){
       return;
     }
-    console.log(this.userForm.value);
-    this.users.push(this.userForm.value);
+    
+    //console.log(this.userForm.value);
+    //this.users.push(this.userForm.value);
   }
 
 }

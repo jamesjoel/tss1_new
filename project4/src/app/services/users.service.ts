@@ -11,6 +11,10 @@ export class UsersService {
   getData(){
     return this._http.get<any>("http://localhost:3000/users");
   }
+
+  saveData(obj:any){
+    return this._http.post<any>("http://localhost:3000/users", obj);
+  }
 }
 /*
   return this._http.get();

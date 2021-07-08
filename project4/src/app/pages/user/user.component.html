@@ -48,6 +48,12 @@
                         <div *ngIf="userForm.controls.age.errors.required">
                             Insert Your Age
                         </div>
+                        <div *ngIf="userForm.controls.age.errors.numErr">
+                            Insert Numbers only
+                        </div>
+                        <div *ngIf="userForm.controls.age.errors.ageErr">
+                            Age Between only 15 to 20
+                        </div>
                     </div>
                 </div>
                 <div class="form-group">
