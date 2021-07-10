@@ -19,6 +19,7 @@ interface Student{
 export class StudentComponent implements OnInit {
 
   studentForm : FormGroup;
+  stu! :Student;
   isSubmit=false;
 
   allStudent:Student[]=[];
@@ -50,6 +51,18 @@ export class StudentComponent implements OnInit {
     this._stu.saveData(this.studentForm.value).subscribe((data)=>{
       // console.log(data);
       this.allStudent.push(data);
+    })
+  }
+  askDelete(obj:any){
+    // console.log(obj);
+    this.stu = obj;
+    console.log(this.stu);
+  }
+
+  delete(){
+    this._stu.deleteData(this.stu.id).subscribe((data)=>{
+      let n = this.allStudent.indexOf(this.stu);
+      this.allStudent.splice(n, 1);
     })
   }
 

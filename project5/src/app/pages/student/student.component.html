@@ -1,5 +1,6 @@
 <div class="row mt-4">
     <div class="col-md-8">
+        
         <button data-toggle="modal" data-target="#addModal" class="btn btn-primary">Add</button>
     </div>
     <Br />
@@ -10,6 +11,7 @@
             <th>Age</th>
             <th>City</th>
             <th>Address</th>
+            <th>Delete</th>
         </tr>
         <tr *ngFor="let s of allStudent; let n = index">
             <td>{{ n+1 }}</td>
@@ -17,9 +19,29 @@
             <td>{{ s.age }}</td>
             <td>{{ s.city }}</td>
             <td>{{ s.address }}</td>
+            <td><button (click)="askDelete(s)" data-toggle="modal" data-target="#delModal" class="btn btn-sm btn-danger">Delete</button></td>
         </tr>
     </table>
 </div>
+
+<div class="modal fade" id="delModal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4>Delete User</h4>
+            </div>
+            <div class="modal-body">
+                <p>Are you sure want to delete this user : <b *ngIf="stu">{{ stu.fullname }}</b></p>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-danger" (click)="delete()" data-dismiss="modal">Delete</button>
+                <button class="btn btn-info" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+
+</div>
+
 
 
 <div class="modal fade" id="addModal">

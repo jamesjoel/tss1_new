@@ -1,41 +1,5 @@
 {
-  "student": [
-    {
-      "id": 1,
-      "fullname": "rohit",
-      "age": 25,
-      "city": "indore",
-      "address": "mg road"
-    },
-    {
-      "id": 2,
-      "fullname": "jaya",
-      "age": 22,
-      "city": "bhopal",
-      "address": "new market"
-    },
-    {
-      "fullname": "james",
-      "age": "23",
-      "city": "bhopal",
-      "address": "demo demo",
-      "id": 3
-    },
-    {
-      "fullname": "nidhi",
-      "age": "24",
-      "city": "bhopal",
-      "address": "demo demo dmeo",
-      "id": 4
-    },
-    {
-      "fullname": "amar",
-      "age": "22",
-      "city": "mumbai",
-      "address": "market",
-      "id": 5
-    }
-  ],
+  "student": [],
   "employee": [
     {
       "name": "amar",
