@@ -1,5 +1,41 @@
 {
-  "student": [],
+  "student": [
+    {
+      "fullname": "jaya",
+      "age": "25",
+      "city": "mumbai",
+      "address": "fsd sg sdfg",
+      "id": 1
+    },
+    {
+      "fullname": "rohit",
+      "age": "30",
+      "city": "bhopal",
+      "address": "sdfg sdfg sdg d",
+      "id": 2
+    },
+    {
+      "id": 3,
+      "fullname": "nilesh pathak",
+      "age": "22",
+      "city": "mumbai",
+      "address": "new market"
+    },
+    {
+      "fullname": "amar",
+      "age": "23",
+      "city": "bhopal",
+      "address": "sfg sdfg sdg",
+      "id": 4
+    },
+    {
+      "id": 5,
+      "fullname": "priyanka",
+      "age": "22",
+      "city": "bhopal",
+      "address": "new market"
+    }
+  ],
   "employee": [
     {
       "name": "amar",

@@ -26,6 +26,7 @@ export class StudentComponent implements OnInit {
 
   constructor(private _fb : FormBuilder, private _stu : StudentService) {
     this.studentForm = this._fb.group({
+      
       fullname : ["", Validators.required],
       age : [null, Validators.required],
       city : ["", Validators.required],
@@ -57,6 +58,16 @@ export class StudentComponent implements OnInit {
     // console.log(obj);
     this.stu = obj;
     console.log(this.stu);
+  }
+  empty(){
+    this.studentForm.setValue({
+      fullname : "",
+      age : null,
+      city : "",
+      address : ""
+
+    });
+    this.isSubmit = false;
   }
 
   delete(){

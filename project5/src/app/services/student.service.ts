@@ -14,6 +14,10 @@ export class StudentService {
   getData(){
     return this._http.get<any>(this.apiUrl);
   }
+  
+  getDataById(id:any){
+    return this._http.get<any>(this.apiUrl+"/"+id);
+  }
 
   saveData(obj:any){
     return this._http.post<any>(this.apiUrl, obj);
