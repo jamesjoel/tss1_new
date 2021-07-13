@@ -11,6 +11,9 @@ import { HomeComponent } from './pages/home/home.component';
 import { StudentComponent } from './pages/student/student.component';
 import { HeaderComponent } from './shared/header/header.component';
 import { EditStudentComponent } from './pages/edit-student/edit-student.component';
+import { EmployeeComponent } from './pages/employee/employee.component';
+import { Demo1Pipe } from './pipes/demo1.pipe';
+import { BonusPipe } from './pipes/bonus.pipe';
 
 @NgModule({
   declarations: [
@@ -18,7 +21,10 @@ import { EditStudentComponent } from './pages/edit-student/edit-student.componen
     HomeComponent,
     StudentComponent,
     HeaderComponent,
-    EditStudentComponent
+    EditStudentComponent,
+    EmployeeComponent,
+    Demo1Pipe,
+    BonusPipe
   ],
   imports: [
     BrowserModule,

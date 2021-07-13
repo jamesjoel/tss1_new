@@ -2,14 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { checkNum } from '../../helpers/studentform.validation';
 import { StudentService } from '../../services/student.service';
-
-interface Student{
-  id? : null;
-  fullname : string;
-  age : null;
-  city : string;
-  address : string;
-}
+import { Student } from '../../models/Student.inetrface';
 
 @Component({
   selector: 'app-student',
@@ -26,7 +19,7 @@ export class StudentComponent implements OnInit {
 
   constructor(private _fb : FormBuilder, private _stu : StudentService) {
     this.studentForm = this._fb.group({
-      
+      id : [null],
       fullname : ["", Validators.required],
       age : [null, Validators.required],
       city : ["", Validators.required],
