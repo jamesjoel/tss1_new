@@ -14,6 +14,8 @@ import { EditStudentComponent } from './pages/edit-student/edit-student.componen
 import { EmployeeComponent } from './pages/employee/employee.component';
 import { Demo1Pipe } from './pipes/demo1.pipe';
 import { BonusPipe } from './pipes/bonus.pipe';
+import { HelloDirective } from './directives/hello.directive';
+import { HideDirective } from './directives/hide.directive';
 
 @NgModule({
   declarations: [
@@ -24,7 +26,9 @@ import { BonusPipe } from './pipes/bonus.pipe';
     EditStudentComponent,
     EmployeeComponent,
     Demo1Pipe,
-    BonusPipe
+    BonusPipe,
+    HelloDirective,
+    HideDirective
   ],
   imports: [
     BrowserModule,

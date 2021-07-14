@@ -12,7 +12,8 @@ export class EmployeeComponent implements OnInit {
       name : "rohit",
       age : 25,
       salary : 5400,
-      gender : "male"
+      gender : "male",
+      date : new Date()
     },
     {
       name : "jaya",
@@ -39,3 +40,9 @@ export class EmployeeComponent implements OnInit {
   }
 
 }
+/*
+obj.date = new Date();
+db.collection().insertOne(obj)
+
+
+*/
