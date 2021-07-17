@@ -3,18 +3,24 @@ import { RouterModule, Routes } from '@angular/router';
 import { AdminComponent } from './admin.component';
 import { ViewstudentComponent } from './pages/viewstudent/viewstudent.component';
 import { ViewteachersComponent } from './pages/viewteachers/viewteachers.component';
+import { HomeComponent } from './pages/home/home.component';
 
 const routes: Routes = [
   {
-    path : "",
+    path : "", // :4200/admin
     component : AdminComponent,
     children : [
       {
-        path : "student",
+        path : "", // :4200/admin
+        component : HomeComponent
+
+      },
+      {
+        path : "student",// :4200/admin/student
         component : ViewstudentComponent
       },
       {
-        path : "teacher",
+        path : "teacher",// :4200/admin/teacher
         component : ViewteachersComponent
       }
     ]

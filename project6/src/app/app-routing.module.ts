@@ -7,7 +7,7 @@ const routes: Routes = [
     loadChildren : ()=>import('./visiter/visiter.module').then(v=>v.VisiterModule)
   },
   {
-    path : "admin",
+    path : "admin", // :4200/admin
     loadChildren : ()=>import('./admin/admin.module').then(a=>a.AdminModule)
   }
 ];

@@ -6,6 +6,8 @@ import { AdminComponent } from './admin.component';
 import { ViewstudentComponent } from './pages/viewstudent/viewstudent.component';
 import { ViewteachersComponent } from './pages/viewteachers/viewteachers.component';
 import { HomeComponent } from './pages/home/home.component';
+import { HeaderComponent } from './shared/header/header.component';
+import { FooterComponent } from './shared/footer/footer.component';
 
 
 @NgModule({
@@ -13,7 +15,9 @@ import { HomeComponent } from './pages/home/home.component';
     AdminComponent,
     ViewstudentComponent,
     ViewteachersComponent,
-    HomeComponent
+    HomeComponent,
+    HeaderComponent,
+    FooterComponent
   ],
   imports: [
     CommonModule,
