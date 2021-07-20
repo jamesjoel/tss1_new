@@ -8,6 +8,8 @@ import { ViewteachersComponent } from './pages/viewteachers/viewteachers.compone
 import { HomeComponent } from './pages/home/home.component';
 import { HeaderComponent } from './shared/header/header.component';
 import { FooterComponent } from './shared/footer/footer.component';
+import { AboutComponent } from './pages/about/about.component';
+import { Child1Component } from './shared/child1/child1.component';
 
 
 @NgModule({
@@ -17,7 +19,9 @@ import { FooterComponent } from './shared/footer/footer.component';
     ViewteachersComponent,
     HomeComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    AboutComponent,
+    Child1Component
   ],
   imports: [
     CommonModule,
