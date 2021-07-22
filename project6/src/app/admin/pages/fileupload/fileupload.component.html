@@ -1,0 +1,29 @@
+<div class="container mt-4">
+    <div class="row">
+        <div class="col-md-12">
+            <h2>File Upload in Angular</h2>
+        <input type="file" #file/>
+        <br />
+        <br />
+        <button (click)="do_upload(file)" class="btn btn-primary">Upload</button>
+        <!-- <pre>{{ imgArr | json }}</pre> -->
+        
+        </div>
+        
+    </div>
+    <div class="row">
+        <div *ngFor="let i of imgArr" class="col-md-3">
+            <img src="{{ i.path }}" height="300" />
+        </div>
+    </div>
+
+</div>
+<!-- 
+    ngModel   ----- formGroup(ngModel)
+
+
+    <form formGroup="">
+
+
+
+ -->
