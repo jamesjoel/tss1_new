@@ -1,8 +1,10 @@
 import { Pipe, PipeTransform } from '@angular/core';
 
+
 @Pipe({
   name: 'bonus'
 })
+
 export class BonusPipe implements PipeTransform {
 
   transform(a:any, b:any, c:any) {
@@ -25,3 +27,7 @@ export class BonusPipe implements PipeTransform {
   }
 
 }
+
+
+
+

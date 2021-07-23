@@ -6,6 +6,7 @@ import { HttpClient } from '@angular/common/http';
   templateUrl: './fileupload.component.html',
   styleUrls: ['./fileupload.component.scss']
 })
+
 export class FileuploadComponent implements OnInit {
 
   imgArr:any[]=[];
