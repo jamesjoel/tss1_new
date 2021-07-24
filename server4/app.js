@@ -4,6 +4,16 @@ var MongoClient = require("mongodb").MongoClient;
 var bodyParser = require("body-parser");
 var sha1 = require("sha1");
 var cors = require("cors");
+var jwt = require("jsonwebtoken");
+/*
+        sha1                                jwt
+    1.its convert string to         1. its convert object to enc string
+    enc string
+    2. the enc string not convert   2. its convert again to object by its 'key'.
+    to dec string
+
+
+*/
 
 app.use(cors());
 app.use(bodyParser.urlencoded());
@@ -23,7 +33,13 @@ app.post("/api/admin/login", (req, res)=>{
             {
                 if(result[0].password == p) // username and password correct
                 {
-                    res.status(200).json({ type : 3});
+                    var obj= { id : result[0]._id };
+                    var token = jwt.sign(obj, "my secret key");
+                    res.status(200).json(token);
+                    // console.log(token);
+                    //res.status(200).json({ type : 3});
+                    //1. redirect
+                    //2. session
                 }
                 else // username correct but password incorrect
                 {

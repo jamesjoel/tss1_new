@@ -7,6 +7,8 @@ import { HomeComponent } from './pages/home/home.component';
 import { AboutComponent } from './pages/about/about.component';
 import { FileuploadComponent } from './pages/fileupload/fileupload.component';
 import { LoginComponent } from './pages/login/login.component';
+import { AuthGuard } from './guard/auth.guard';
+import { BeforeLoginGuard } from './guard/before-login.guard';
 
 const routes: Routes = [
   {
@@ -15,28 +17,34 @@ const routes: Routes = [
     children : [
       {
         path : "", // :4200/admin
-        component : HomeComponent
+        component : HomeComponent,
+        canActivate : [AuthGuard]
 
       },
       {
         path : "login",
-        component : LoginComponent
+        component : LoginComponent,
+        canActivate : [BeforeLoginGuard]
       },
       {
         path : "student",// :4200/admin/student
-        component : ViewstudentComponent
+        component : ViewstudentComponent,
+        canActivate : [AuthGuard]
       },
       {
         path : "teacher",// :4200/admin/teacher
-        component : ViewteachersComponent
+        component : ViewteachersComponent,
+        canActivate : [AuthGuard]
       },
       {
         path : "about",
-        component : AboutComponent
+        component : AboutComponent,
+        canActivate : [AuthGuard]
       },
       {
         path : "upload",
-        component : FileuploadComponent
+        component : FileuploadComponent,
+        canActivate : [AuthGuard]
       }
     ]
 
