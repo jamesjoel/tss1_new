@@ -1,0 +1,20 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-8 offset-md-2">
+            <table class="table table-dark table-bordered">
+                <tr>
+                    <th>S.No.</th>
+                    <th>Name</th>
+                    <th>Age</th>
+                    <th>City</th>
+                </tr>
+                <tr *ngFor="let s of allStu; let n = index">
+                    <td>{{ n+1 }}</td>
+                    <td>{{ s.name }}</td>
+                    <td>{{ s.age }}</td>
+                    <td>{{ s.city }}</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>
